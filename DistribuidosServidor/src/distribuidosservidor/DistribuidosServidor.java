@@ -5,7 +5,7 @@
  */
 package distribuidosservidor;
 
-import hilos.ServidorHilo;
+import Hilos.ServidorHilo;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -22,24 +22,18 @@ public class DistribuidosServidor {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException {
-        System.out.print("Inicializando servidor... ");
-        try {
-            ServerSocket socketCliente = new ServerSocket(8000);
-            int idSessionC = 0;
-            while (true) {
-                Socket socketCC;
-                try {
-                    socketCliente.setSoTimeout(2000);
-                    socketCC = socketCliente.accept();
-                    if(socketCC.isBound()){
-                        System.out.println("Nueva conexión entrante de cliente: "+socketCC);
-                        ServidorHilo servidorHilo = new ServidorHilo(socketCC,idSessionC).start();
-                        idSessionC++; 
-                    }
-                } catch (java.io.InterruptedIOException e) {
-                    System.out.println("Tiempo de espera de cliente agotado");
-                }
 
+        try {
+            System.out.print("Inicializando servidor... ");
+            ServerSocket ss = new ServerSocket(10578);
+            int idSession = 0;
+            while (true) {
+                Socket socket;
+                socket = ss.accept();
+                System.out.println("Nueva conexión entrante: "+socket);
+                ServidorHilo servidorHilo = new ServidorHilo(socket, idSession);
+                servidorHilo.start();
+                idSession++;
             }
         } catch (IOException ex) {
             Logger.getLogger(DistribuidosServidor.class.getName()).log(Level.SEVERE, null, ex);

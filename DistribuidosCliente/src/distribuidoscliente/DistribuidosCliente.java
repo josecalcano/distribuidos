@@ -5,6 +5,9 @@
  */
 package distribuidoscliente;
 
+import Entidades.Usuario;
+import java.util.ArrayList;
+
 /**
  *
  * @author JoseAngel
@@ -15,7 +18,9 @@ public class DistribuidosCliente {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // TODO code application logic here        
+
+        
     }
     
 }

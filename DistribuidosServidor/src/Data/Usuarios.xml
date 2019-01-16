@@ -1,0 +1,17 @@
+<Usuarios>
+  <Usuario>
+    <NombreUsuario>josecalcano</NombreUsuario>
+    <Clave>123456</Clave>
+    <Ruta>C:\josecalcano</Ruta>
+  </Usuario>
+  <Usuario>
+    <NombreUsuario>marialead</NombreUsuario>
+    <Clave>123456</Clave>
+    <Ruta>C:\marialead</Ruta>
+  </Usuario>
+  <Usuario>
+    <NombreUsuario>lexposito</NombreUsuario>
+    <Clave>123456</Clave>
+    <Ruta>C:\lexposito</Ruta>
+  </Usuario>
+</Usuarios>
