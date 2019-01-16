@@ -1,0 +1,37 @@
+<Data>
+  <ArchivoData>
+    <Id>1</Id>
+    <Nombre>clavesJenny.txt</Nombre>
+    <Ruta>../DistribuidosServidor/datos/null/20190116 030114_clavesJenny.txt</Ruta>
+    <Fecha>20190116 030114</Fecha>
+    <NombreUsuario>null</NombreUsuario>
+  </ArchivoData>
+  <ArchivoData>
+    <Id>2</Id>
+    <Nombre>EstimacionAidpass.xlsx</Nombre>
+    <Ruta>../DistribuidosServidor/datos/josecalcano/20190116 030406_EstimacionAidpass.xlsx</Ruta>
+    <Fecha>20190116 030406</Fecha>
+    <NombreUsuario>josecalcano</NombreUsuario>
+  </ArchivoData>
+  <ArchivoData>
+    <Id>3</Id>
+    <Nombre>clavesJenny.txt</Nombre>
+    <Ruta>../DistribuidosServidor/datos/null/20190116 030711_clavesJenny.txt</Ruta>
+    <Fecha>20190116 030711</Fecha>
+    <NombreUsuario>null</NombreUsuario>
+  </ArchivoData>
+  <ArchivoData>
+    <Id>4</Id>
+    <Nombre>clavesJenny.txt</Nombre>
+    <Ruta>../DistribuidosServidor/datos/josecalcano/20190116 030857_clavesJenny.txt</Ruta>
+    <Fecha>20190116 030857</Fecha>
+    <NombreUsuario>josecalcano</NombreUsuario>
+  </ArchivoData>
+  <ArchivoData>
+    <Id>5</Id>
+    <Nombre>EstimacionAidpass.xlsx</Nombre>
+    <Ruta>../DistribuidosServidor/datos/josecalcano/20190116 031426_EstimacionAidpass.xlsx</Ruta>
+    <Fecha>20190116 031426</Fecha>
+    <NombreUsuario>josecalcano</NombreUsuario>
+  </ArchivoData>
+</Data>
