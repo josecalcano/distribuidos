@@ -75,7 +75,6 @@ public class Menu extends javax.swing.JFrame {
         PanelCheckout = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tablaCheckout = new javax.swing.JTable();
-        buArchivoCheckout = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -207,30 +206,17 @@ public class Menu extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(tablaCheckout);
 
-        buArchivoCheckout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/download-icon-down-arrow-23.png"))); // NOI18N
-        buArchivoCheckout.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buArchivoCheckoutActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout PanelCheckoutLayout = new javax.swing.GroupLayout(PanelCheckout);
         PanelCheckout.setLayout(PanelCheckoutLayout);
         PanelCheckoutLayout.setHorizontalGroup(
             PanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 512, Short.MAX_VALUE)
-            .addGroup(PanelCheckoutLayout.createSequentialGroup()
-                .addGap(205, 205, 205)
-                .addComponent(buArchivoCheckout, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PanelCheckoutLayout.setVerticalGroup(
             PanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelCheckoutLayout.createSequentialGroup()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(buArchivoCheckout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 21, Short.MAX_VALUE))
         );
 
         jLayeredPane1.add(PanelCheckout, "card4");
@@ -406,54 +392,6 @@ public class Menu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_buArchivoUpdateActionPerformed
 
-    private void buArchivoCheckoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buArchivoCheckoutActionPerformed
-        int row = tablaCheckout.getSelectedRow();
-        String name = tablaCheckout.getValueAt(row, 0).toString();
-        String date = tablaCheckout.getValueAt(row, 1).toString();
-        try{
-            socket = new Socket("192.168.0.100",8000);
-        }catch (IOException ex){
-            System.out.println("Error de conexion en el checkout");
-        }
-        try{
-            System.out.println("Conexión iniciada");
-            DataOutputStream dos;
-            dos = new DataOutputStream(socket.getOutputStream());
-            dos.writeUTF("006-"+user+"-"+name+"-"+date);
-            System.out.println("Archivos enviados");
-            JOptionPane.showMessageDialog(this, "Localizando archivo");
-            BufferedInputStream bis;
-            BufferedOutputStream bos;
-            byte[] receivedData;
-            int in;
-            String file;
-             //Buffer de 1024 bytes
-            receivedData = new byte[1024];
-            bis = new BufferedInputStream(socket.getInputStream());
-            DataInputStream dis = new DataInputStream(socket.getInputStream());
-            //Recibimos el nombre del fichero
-            file = dis.readUTF();
-            file = file.substring(file.indexOf('\\')+1,file.length());
-            //Para guardar fichero recibido
-            bos = new BufferedOutputStream(new FileOutputStream(file));
-            while ((in = bis.read(receivedData)) != -1){
-                bos.write(receivedData,0,in);
-            }
-            bos.close();
-            dis.close();
-            int prueba = control.crearArchivo(user, file, 0);
-            if(prueba==1){
-                JOptionPane.showMessageDialog(this, "Archivo descargado");
-            }
-            if(prueba==0){
-                JOptionPane.showMessageDialog(this, "Archivo no encontrado");
-            }
-            dos.close();
-        }catch (IOException ex){
-            System.out.println("Error de conexion en el checkout.");
-        }
-    }//GEN-LAST:event_buArchivoCheckoutActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -497,7 +435,6 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JPanel PanelCommit;
     private javax.swing.JPanel PanelUpdate;
     private javax.swing.JPanel PanelVacio;
-    private javax.swing.JButton buArchivoCheckout;
     private javax.swing.JButton buArchivoUpdate;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JPanel jPanel1;
