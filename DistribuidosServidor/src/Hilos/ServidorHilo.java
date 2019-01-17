@@ -6,9 +6,11 @@
 package Hilos;
 
 import Data.UsuarioData;
+import Entidades.Data;
 import Logica.Logica;
 import java.io.*;
 import java.net.*;
+import java.util.ArrayList;
 import java.util.logging.*;
 
 /**
@@ -57,7 +59,6 @@ public class ServidorHilo extends Thread {
             }
             if (parts[0].equals("COMMIT")) {
                 System.out.println("Preparando commit");
-                DataOutputStream output;
                 BufferedInputStream bis;
                 BufferedOutputStream bos;
                 byte[] receivedData;
@@ -80,6 +81,42 @@ public class ServidorHilo extends Thread {
                 }
                 if (resultado == 0) {
                     System.out.println("Error guardando");
+                }
+            }
+            if (parts[0].equals("UPDATE")) {
+                System.out.println("Preparando update");
+                System.out.println(parts[1]);
+
+                ArrayList<Data> listaArchivos = logica.buscarUltimosArchivos(parts[1]);                
+                ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
+                oos.writeObject(listaArchivos);
+                oos.close();
+            }
+            if (parts[0].equals("BUSQUEDAUPDATE")) {
+                System.out.println("005-Recibido datos de busqueda de archivo seleccionado.");
+                DataInputStream input;
+                BufferedInputStream bis;
+                BufferedOutputStream bos;
+                int in;
+                byte[] byteArray;
+                try {
+                    String path = logica.buscarArchivoSeleccionado(parts[1], parts[2], parts[3]);
+                    File file = new File(path);
+                    System.out.println("005-Encontrado el archivo seleccionado.");
+                    bis = new BufferedInputStream(new FileInputStream(file));
+                    bos = new BufferedOutputStream(socket.getOutputStream());
+                    DataOutputStream dos = new DataOutputStream(socket.getOutputStream());
+                    dos.writeUTF(file.getName());
+                    System.out.println("005-Enviado el archivo seleccionado.");
+                    //Enviamos el fichero
+                    byteArray = new byte[8192];
+                    while ((in = bis.read(byteArray)) != -1) {
+                        bos.write(byteArray, 0, in);
+                    }
+                    bis.close();
+                    bos.close();
+                } catch (Exception e) {
+                    System.err.println("Error en el HiloC. " + e);
                 }
             }
             if (accion.equals("hola")) {

@@ -66,6 +66,11 @@ public class Opciones extends javax.swing.JFrame {
         });
 
         updateButton.setText("UPDATE");
+        updateButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateButtonActionPerformed(evt);
+            }
+        });
 
         checkoutButton.setText("CHECKOUT");
         checkoutButton.addActionListener(new java.awt.event.ActionListener() {
@@ -147,6 +152,14 @@ public class Opciones extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Seleccion de archivo cancelado.");
             }
     }//GEN-LAST:event_commitButtonActionPerformed
+
+    private void updateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateButtonActionPerformed
+        // TODO add your handling code here:
+            Update update =new Update(this.nombreUsuario);
+            update.setVisible(true);
+            update.setLocationRelativeTo(null);
+            dispose();
+    }//GEN-LAST:event_updateButtonActionPerformed
 
     /**
      * @param args the command line arguments

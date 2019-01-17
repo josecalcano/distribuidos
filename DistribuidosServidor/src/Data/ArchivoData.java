@@ -8,6 +8,7 @@ package Data;
 import Entidades.Data;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.Serializable;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -24,7 +25,7 @@ import org.jdom.output.XMLOutputter;
  *
  * @author JoseAngel
  */
-public class ArchivoData {
+public class ArchivoData implements Serializable {
 
     private Element root;
 
@@ -72,7 +73,7 @@ public class ArchivoData {
     }
     
      private Data ArchivoToObject(Element element) throws ParseException {
-        Data nArchivo = new Data(Integer.parseInt(element.getChildText("Id")), element.getChildText("Name"), element.getChildText("Path"), element.getChildText("Date"), element.getChildText("Username")) { 
+        Data nArchivo = new Data(Integer.parseInt(element.getChildText("Id")), element.getChildText("Nombre"), element.getChildText("Ruta"), element.getChildText("Fecha"), element.getChildText("NombreUsuario")) { 
        };
        return nArchivo;
        }
@@ -194,8 +195,8 @@ public class ArchivoData {
     }
     
     public Data buscarArchivo(String name, String username) {
-        Element aux = new Element("Archivo");
-        List Archivos = this.root.getChildren("Archivo");
+        Element aux = new Element("ArchivoData");
+        List Archivos = this.root.getChildren("ArchivoData");
         while (aux != null) {
             aux = ArchivoData.buscar(Archivos, name, username);
             if (aux != null) {
@@ -221,14 +222,14 @@ public class ArchivoData {
     }
         
     public String buscarArchivoId(int id) {
-        Element aux = new Element("Archivo");
-        List Archivos = this.root.getChildren("Archivo");
+        Element aux = new Element("ArchivoData");
+        List Archivos = this.root.getChildren("ArchivoData");
         while (aux != null) {
             
             aux = ArchivoData.buscarporId(Archivos, id);
             if (aux != null) {
                 try {
-                    return aux.getChild("Username").getText()+"-"+aux.getChild("Path").getText();
+                    return aux.getChild("NombreUsuario").getText()+"-"+aux.getChild("Ruta").getText();
                 } catch (Exception ex) {
                     System.out.println(ex.getMessage());
                 }
@@ -265,8 +266,8 @@ public class ArchivoData {
     }
     
     public Data buscarUpdate(int id) {
-        Element aux = new Element("Archivo");
-        List Archivos = this.root.getChildren("Archivo");
+        Element aux = new Element("ArchivoData");
+        List Archivos = this.root.getChildren("ArchivoData");
         while (aux != null) {
             aux = ArchivoData.buscarUp(Archivos, id);
             if (aux != null) {
@@ -284,7 +285,7 @@ public class ArchivoData {
         Iterator i = raiz.iterator();
         while (i.hasNext()) {
             Element e = (Element) i.next();
-            if (username.equals(e.getChild("Username").getText()) && name.equals(e.getChild("Name").getText()) && date.equals(e.getChild("Date").getText())) {
+            if (username.equals(e.getChild("NombreUsuario").getText()) && name.equals(e.getChild("Nombre").getText()) && date.equals(e.getChild("Fecha").getText())) {
                 return e;
             }
         }
@@ -292,14 +293,14 @@ public class ArchivoData {
     }
     
     public String buscarArchivoSeleccionado(String username, String name, String date) {
-        Element aux = new Element("Archivo");
-        List Archivos = this.root.getChildren("Archivo");
+        Element aux = new Element("ArchivoData");
+        List Archivos = this.root.getChildren("ArchivoData");
         while (aux != null) {
             aux = ArchivoData.buscarSeleccionado(Archivos, username, name, date);
             if (aux != null) {
                 try {
-                    System.out.println(aux.getChild("Path").getText());
-                    return aux.getChild("Path").getText();
+                    System.out.println(aux.getChild("Ruta").getText());
+                    return aux.getChild("Ruta").getText();
                 } catch (Exception ex) {
                     System.out.println(ex.getMessage());
                 }

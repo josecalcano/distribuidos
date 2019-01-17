@@ -101,6 +101,8 @@ public class Logica {
         ArrayList<Data> archivo;
         try{
             archivo = dataArchivos.ultimosArchivos(user);
+                        System.out.println(archivo);
+
             return archivo;
         } catch (Exception e){
             System.out.println("Error buscarArchivo " + e);

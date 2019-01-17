@@ -6,6 +6,7 @@
 package distribuidoscliente;
 
 import Entidades.Usuario;
+import Ventanas.Login;
 import java.util.ArrayList;
 
 /**
@@ -19,7 +20,9 @@ public class DistribuidosCliente {
      */
     public static void main(String[] args) {
         // TODO code application logic here        
-
+            Login login =new Login();
+            login.setVisible(true);
+            login.setLocationRelativeTo(null);
         
     }
     
