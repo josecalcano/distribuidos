@@ -65,16 +65,8 @@ public class Menu extends javax.swing.JFrame {
         Bcommit = new javax.swing.JButton();
         Bupdate = new javax.swing.JButton();
         Bcheckout = new javax.swing.JButton();
-        Bsalir = new javax.swing.JButton();
         jLayeredPane1 = new javax.swing.JLayeredPane();
         PanelVacio = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         PanelCommit = new javax.swing.JPanel();
         PanelUpdate = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -87,31 +79,24 @@ public class Menu extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        Bcommit.setText("Commit");
+        Bcommit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/checkmark.png"))); // NOI18N
         Bcommit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BcommitActionPerformed(evt);
             }
         });
 
-        Bupdate.setText("Update");
+        Bupdate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/61076.png"))); // NOI18N
         Bupdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BupdateActionPerformed(evt);
             }
         });
 
-        Bcheckout.setText("Checkout");
+        Bcheckout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/61437-200.png"))); // NOI18N
         Bcheckout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BcheckoutActionPerformed(evt);
-            }
-        });
-
-        Bsalir.setText("Salir");
-        Bsalir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BsalirActionPerformed(evt);
             }
         });
 
@@ -120,95 +105,37 @@ public class Menu extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(70, 70, 70)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(Bcheckout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Bsalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Bupdate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Bcommit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(Bcommit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Bupdate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(83, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addComponent(Bcommit)
-                .addGap(18, 18, 18)
-                .addComponent(Bupdate)
-                .addGap(18, 18, 18)
-                .addComponent(Bcheckout)
-                .addGap(18, 18, 18)
-                .addComponent(Bsalir)
+                .addGap(34, 34, 34)
+                .addComponent(Bcommit, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36)
+                .addComponent(Bupdate, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36)
+                .addComponent(Bcheckout, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jLayeredPane1.setLayout(new java.awt.CardLayout());
 
-        jLabel1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Bienvenido al controlador de versiones!");
-
-        jLabel2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel2.setText("Commit:");
-
-        jLabel3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel3.setText("Update:");
-
-        jLabel4.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel4.setText("Checkout:");
-
-        jLabel5.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        jLabel5.setText("Sube archivos al servidor principal y los réplica en otros servidores.");
-
-        jLabel6.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        jLabel6.setText("Permite traer la última versión del archivo seleccionado.");
-
-        jLabel7.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        jLabel7.setText("Permite elegir que versión del archivo traerse.");
-
         javax.swing.GroupLayout PanelVacioLayout = new javax.swing.GroupLayout(PanelVacio);
         PanelVacio.setLayout(PanelVacioLayout);
         PanelVacioLayout.setHorizontalGroup(
             PanelVacioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelVacioLayout.createSequentialGroup()
-                .addContainerGap(81, Short.MAX_VALUE)
-                .addGroup(PanelVacioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PanelVacioLayout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel7))
-                    .addGroup(PanelVacioLayout.createSequentialGroup()
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel6))
-                    .addGroup(PanelVacioLayout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel5))
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 466, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(119, Short.MAX_VALUE))
+            .addGap(0, 512, Short.MAX_VALUE)
         );
         PanelVacioLayout.setVerticalGroup(
             PanelVacioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelVacioLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PanelVacioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel5))
-                .addGap(48, 48, 48)
-                .addGroup(PanelVacioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel6))
-                .addGap(62, 62, 62)
-                .addGroup(PanelVacioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel7))
-                .addContainerGap(72, Short.MAX_VALUE))
+            .addGap(0, 461, Short.MAX_VALUE)
         );
 
         jLayeredPane1.add(PanelVacio, "card5");
@@ -217,11 +144,11 @@ public class Menu extends javax.swing.JFrame {
         PanelCommit.setLayout(PanelCommitLayout);
         PanelCommitLayout.setHorizontalGroup(
             PanelCommitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 680, Short.MAX_VALUE)
+            .addGap(0, 512, Short.MAX_VALUE)
         );
         PanelCommitLayout.setVerticalGroup(
             PanelCommitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 397, Short.MAX_VALUE)
+            .addGap(0, 461, Short.MAX_VALUE)
         );
 
         jLayeredPane1.add(PanelCommit, "card2");
@@ -239,7 +166,7 @@ public class Menu extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tablaUpdate);
 
-        buArchivoUpdate.setText("Traer Archivo Seleccionado");
+        buArchivoUpdate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/download-icon-down-arrow-23.png"))); // NOI18N
         buArchivoUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buArchivoUpdateActionPerformed(evt);
@@ -250,19 +177,19 @@ public class Menu extends javax.swing.JFrame {
         PanelUpdate.setLayout(PanelUpdateLayout);
         PanelUpdateLayout.setHorizontalGroup(
             PanelUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 680, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 512, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelUpdateLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(buArchivoUpdate)
-                .addGap(251, 251, 251))
+                .addComponent(buArchivoUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(206, 206, 206))
         );
         PanelUpdateLayout.setVerticalGroup(
             PanelUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelUpdateLayout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 329, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(buArchivoUpdate)
-                .addContainerGap())
+                .addGap(21, 21, 21))
         );
 
         jLayeredPane1.add(PanelUpdate, "card3");
@@ -280,7 +207,7 @@ public class Menu extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(tablaCheckout);
 
-        buArchivoCheckout.setText("Traer Archivo Seleccionado");
+        buArchivoCheckout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/download-icon-down-arrow-23.png"))); // NOI18N
         buArchivoCheckout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buArchivoCheckoutActionPerformed(evt);
@@ -291,18 +218,18 @@ public class Menu extends javax.swing.JFrame {
         PanelCheckout.setLayout(PanelCheckoutLayout);
         PanelCheckoutLayout.setHorizontalGroup(
             PanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 680, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCheckoutLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(buArchivoCheckout)
-                .addGap(251, 251, 251))
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 512, Short.MAX_VALUE)
+            .addGroup(PanelCheckoutLayout.createSequentialGroup()
+                .addGap(205, 205, 205)
+                .addComponent(buArchivoCheckout, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PanelCheckoutLayout.setVerticalGroup(
             PanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelCheckoutLayout.createSequentialGroup()
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
-                .addComponent(buArchivoCheckout)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(buArchivoCheckout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -331,7 +258,7 @@ public class Menu extends javax.swing.JFrame {
         try{
             socket = new Socket("192.168.0.100",8000);
         }catch (IOException ex){
-            System.out.println("Conexion caida en commit.");
+            System.out.println("Error de conexión en el commit.");
         }
         JFileChooser filechooser=new JFileChooser();
         int returnVal = filechooser.showOpenDialog(this);
@@ -349,9 +276,9 @@ public class Menu extends javax.swing.JFrame {
                     bos = new BufferedOutputStream(socket.getOutputStream());
                     DataOutputStream dos = new DataOutputStream(socket.getOutputStream());
                     dos.writeUTF("002-"+user);
-                    System.out.println("002-Enviado archivo seleccionado del commit.");
+                    System.out.println("Commit enviado.");
                     dos.writeUTF(file.getName());
-                    JOptionPane.showMessageDialog(this, "Fichero Enviado Correctamente.");
+                    JOptionPane.showMessageDialog(this, "Envío satisfactorio.");
                     //Enviamos el fichero
                     byteArray = new byte[8192];
                     while ((in = bis.read(byteArray)) != -1){
@@ -360,85 +287,77 @@ public class Menu extends javax.swing.JFrame {
                     bis.close();
                     bos.close();
                 }catch ( Exception e ) {
-                    System.err.println("Error de envio de archivo de commit. "+e);
+                    System.err.println("Error en commit. "+e);
                 }
             } 
             else 
             {
-                JOptionPane.showMessageDialog(this, "Seleccion de archivo cancelado.");
+                JOptionPane.showMessageDialog(this, "Opción cancelada.");
             }
     }//GEN-LAST:event_BcommitActionPerformed
 
     private void BupdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BupdateActionPerformed
         control.activarPanel(PanelUpdate, PanelCommit, PanelCheckout, PanelVacio);
         tablaUpdate.setModel(new javax.swing.table.DefaultTableModel(new Object [][] {}, new String [] {"Nombre del Archivo", "Fecha de subida"}));
-        JOptionPane.showMessageDialog(this, "Cargando tabla por favor espere.");
+        JOptionPane.showMessageDialog(this, "Buscando archivos...");
         Archivo archivo = null;
         ArrayList<Archivo> listaArchivos = null;
         try{
             socket = new Socket("192.168.0.100",8000);
         }catch (IOException ex){
-            System.out.println("Conexion caida en update.");
+            System.out.println("Error de conexion en el update.");
         }
         try{
             DataOutputStream dos;
             dos = new DataOutputStream(socket.getOutputStream());
             dos.writeUTF("003-"+user);
-            System.out.println("003-Enviado actualizacion de tabla de archivos del update.");
+            System.out.println("Update enviado.");
             ObjectInputStream ois;
             ois  = new ObjectInputStream(socket.getInputStream());
             listaArchivos = (ArrayList) ois.readObject();
-            System.out.println("003-Tabla llenada con los datos recibidos del update.");
+            System.out.println("Recibiendo archivos del update.");
             ois.close();
             dos.close();      
         }catch (IOException ex){
-            System.out.println("Conexion caida al intentar llenar tabla del update.");
+            System.out.println("Error de conexión en el update.");
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
         }
         control.llenarTabla(listaArchivos, tablaUpdate);
-        JOptionPane.showMessageDialog(this, "Tabla de la version mas reciente de archivos subidos. Lista!.");
+        JOptionPane.showMessageDialog(this, "Operación exitosa");
     }//GEN-LAST:event_BupdateActionPerformed
 
     private void BcheckoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BcheckoutActionPerformed
         control.activarPanel(PanelCheckout, PanelUpdate, PanelCommit, PanelVacio);
         tablaCheckout.setModel(new javax.swing.table.DefaultTableModel(new Object [][] {}, new String [] {"Nombre del Archivo", "Fecha de subida"}));
-        JOptionPane.showMessageDialog(this, "Cargando tabla por favor espere.");
+        JOptionPane.showMessageDialog(this, "Buscando archivos...");
         Archivo archivo = null;
         ArrayList<Archivo> listaArchivos = null;
         try{
             socket = new Socket("192.168.0.100",8000);
         }catch (IOException ex){
-            System.out.println("Conexion caida en checkout.");
+            System.out.println("Error de conexion en el checkout.");
         }
         try{
             DataOutputStream dos;
             dos = new DataOutputStream(socket.getOutputStream());
             dos.writeUTF("004-"+user);
-            System.out.println("004-Enviado actualizacion de tabla de archivos del checkout.");
+            System.out.println("Checkout enviado");
             ObjectInputStream ois;
             ois  = new ObjectInputStream(socket.getInputStream());
             listaArchivos = (ArrayList) ois.readObject();
-            System.out.println("004-Tabla llenada con los datos recibidos del checkout.");
+            System.out.println("Operación exitosa");
             ois.close();
             dos.close();
       
         }catch (IOException ex){
-            System.out.println("Conexion caida al intentar llenar tabla del checkout.");
+            System.out.println("Error de conexión en el checkout");
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
         }
         control.llenarTabla(listaArchivos, tablaCheckout);
-        JOptionPane.showMessageDialog(this, "Tabla de todas las versiones de archivos subidos. Lista!.");
+        JOptionPane.showMessageDialog(this, "Operación exitosa");
     }//GEN-LAST:event_BcheckoutActionPerformed
-
-    private void BsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BsalirActionPerformed
-        JOptionPane.showMessageDialog(this, "Desconectado correctamente. Hasta luego "+user+"!.");    
-        Login login =new Login();
-        login.setVisible(true);
-        login.setLocationRelativeTo(null);
-        dispose();
-    }//GEN-LAST:event_BsalirActionPerformed
 
     private void buArchivoUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buArchivoUpdateActionPerformed
         int row = tablaUpdate.getSelectedRow();
@@ -447,14 +366,14 @@ public class Menu extends javax.swing.JFrame {
         try{
             socket = new Socket("192.168.0.100",8000);
         }catch (IOException ex){
-            System.out.println("Conexion caida al realizar transferencia del archivo del update.");
+            System.out.println("Error de conexión en el update.");
         }
         try{
             DataOutputStream dos;
             dos = new DataOutputStream(socket.getOutputStream());
             dos.writeUTF("005-"+user+"-"+name+"-"+date);
-            System.out.println("005-Enviados datos de busqueda de archivo seleccionado.");
-            JOptionPane.showMessageDialog(this, "Buscando archivo en el servidor. Por favor Espere!.");
+            System.out.println("Datos enviados");
+            JOptionPane.showMessageDialog(this, "Localizando archivo");
             BufferedInputStream bis;
             BufferedOutputStream bos;
             byte[] receivedData;
@@ -476,14 +395,14 @@ public class Menu extends javax.swing.JFrame {
             dis.close();
             int prueba = control.crearArchivo(user, file, 0);
             if(prueba==1){
-                JOptionPane.showMessageDialog(this, "Archivo recibido en su escritorio, revise la carpeta con su nombre de usuario!.");
+                JOptionPane.showMessageDialog(this, "Archivo descargado");
             }
             if(prueba==0){
-                JOptionPane.showMessageDialog(this, "Archivo no encontrado en el servidor. Intente nuevamente!.");
+                JOptionPane.showMessageDialog(this, "Archivo no encontrado");
             }
             dos.close();
         }catch (IOException ex){
-            System.out.println("Conexion caida en la busqueda de archivos del update.");
+            System.out.println("Error de conexión en el update");
         }
     }//GEN-LAST:event_buArchivoUpdateActionPerformed
 
@@ -494,15 +413,15 @@ public class Menu extends javax.swing.JFrame {
         try{
             socket = new Socket("192.168.0.100",8000);
         }catch (IOException ex){
-            System.out.println("Conexion caida al realizar transferencia del archivo del checkout.");
+            System.out.println("Error de conexion en el checkout");
         }
         try{
-            System.out.println("Iniciamos conexion");
+            System.out.println("Conexión iniciada");
             DataOutputStream dos;
             dos = new DataOutputStream(socket.getOutputStream());
             dos.writeUTF("006-"+user+"-"+name+"-"+date);
-            System.out.println("006-Enviados datos de busqueda de archivo seleccionado.");
-            JOptionPane.showMessageDialog(this, "Buscando archivo en el servidor. Por favor Espere!.");
+            System.out.println("Archivos enviados");
+            JOptionPane.showMessageDialog(this, "Localizando archivo");
             BufferedInputStream bis;
             BufferedOutputStream bos;
             byte[] receivedData;
@@ -524,14 +443,14 @@ public class Menu extends javax.swing.JFrame {
             dis.close();
             int prueba = control.crearArchivo(user, file, 0);
             if(prueba==1){
-                JOptionPane.showMessageDialog(this, "Archivo recibido en su escritorio, revise la carpeta con su nombre de usuario!.");
+                JOptionPane.showMessageDialog(this, "Archivo descargado");
             }
             if(prueba==0){
-                JOptionPane.showMessageDialog(this, "Archivo no encontrado en el servidor. Intente nuevamente!.");
+                JOptionPane.showMessageDialog(this, "Archivo no encontrado");
             }
             dos.close();
         }catch (IOException ex){
-            System.out.println("Conexion caida en la busqueda de archivos del checkout.");
+            System.out.println("Error de conexion en el checkout.");
         }
     }//GEN-LAST:event_buArchivoCheckoutActionPerformed
 
@@ -573,7 +492,6 @@ public class Menu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Bcheckout;
     private javax.swing.JButton Bcommit;
-    private javax.swing.JButton Bsalir;
     private javax.swing.JButton Bupdate;
     private javax.swing.JPanel PanelCheckout;
     private javax.swing.JPanel PanelCommit;
@@ -581,13 +499,6 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JPanel PanelVacio;
     private javax.swing.JButton buArchivoCheckout;
     private javax.swing.JButton buArchivoUpdate;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
