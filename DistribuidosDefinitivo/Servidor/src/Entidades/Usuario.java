@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dominio;
+package Entidades;
 
 import java.io.Serializable;
 
 /**
  *
- * @author alber
+ * @author JoseAngel
  */
 public class Usuario implements Serializable {
     String username, pass, path;

@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package persistencia;
+package FuenteDatos;
 
-import dominio.Usuario;
+import Entidades.Servidor;
+import Entidades.Usuario;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.ParseException;
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import org.jdom.Document;
@@ -17,16 +17,17 @@ import org.jdom.Element;
 import org.jdom.JDOMException;
 import org.jdom.input.SAXBuilder;
 import org.jdom.output.XMLOutputter;
+
 /**
  *
- * @author alber
+ * @author JoseAngel
  */
-public class UsuarioXml {
+public class ServidorXml {
     private Element root;
    
-    private String fileLocation = "src//Archivos//UsuarioBaseDatos.xml";
+    private String fileLocation = "src//Archivos//ServidorBaseDatos.xml";
     
-    public UsuarioXml() {
+    public ServidorXml() {
         try {
             SAXBuilder builder = new SAXBuilder(false);
             Document doc = null;
@@ -39,28 +40,37 @@ public class UsuarioXml {
         }
     }
     
-    private Element UsuariotoXmlElement(Usuario nUsuario) {
-        Element usuarioE = new Element("Usuario");
+    private Element ServidorXmlElement(Servidor nServidor) {
+        Element servidorE = new Element("Servidor");
         
-        Element username = new Element("Username");
-        username.setText(nUsuario.getUsername());
+        Element id = new Element("Id");
+        id.setText(Integer.toString(nServidor.getId()));
         
-        Element pass = new Element("Password");
-        pass.setText(nUsuario.getPass());
+        Element ip = new Element("Ip");
+        ip.setText(nServidor.getIp());
         
-        Element path = new Element("Path");
-        path.setText(nUsuario.getPath());
+        Element rol = new Element("Rol");
+        rol.setText(nServidor.getRol());
+        
+        Element port = new Element("Port");
+        port.setText(Integer.toString(nServidor.getPort()));
+        
+        Element state = new Element("State");
+        state.setText(Integer.toString(nServidor.getState()));
 
-        usuarioE.addContent(username);
-        usuarioE.addContent(pass);
-        usuarioE.addContent(path);
-        return usuarioE;
+        servidorE.addContent(id);
+        servidorE.addContent(ip);
+        servidorE.addContent(rol);
+        servidorE.addContent(port);
+        servidorE.addContent(state);
+        
+        return servidorE;
     }
     
-     private Usuario UsuarioToObject(Element element) throws ParseException {
-        Usuario nUsuario = new Usuario(element.getChildText("Username"), element.getChildText("Password"), element.getChildText("Path")) { 
+     private Servidor ServidorToObject(Element element) throws ParseException {
+        Servidor nServidor = new Servidor(Integer.parseInt(element.getChildText("Id")), Integer.parseInt(element.getChildText("Port")), Integer.parseInt(element.getChildText("State")), element.getChildText("Ip"), element.getChildText("Rol")) { 
        };
-       return nUsuario;
+       return nServidor;
        }
      
     private boolean updateDocument() {
@@ -76,7 +86,7 @@ public class UsuarioXml {
             return false;
         }
     }
-        
+   /*     
     public static Element buscar(List raiz, String username, String password) {
         Iterator i = raiz.iterator();
         while (i.hasNext()) {
@@ -103,6 +113,5 @@ public class UsuarioXml {
             }
         }
         return null;
-    }
-    
+    }  */
 }

@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package servidor;
+package Hilos;
 
-import dominio.Usuario;
-import controlador.Controladora;
-import dominio.Archivo;
+import Entidades.Usuario;
+import Logica.Controladora;
+import Entidades.Archivo;
 import java.awt.Desktop;
-import persistencia.UsuarioXml;
+import FuenteDatos.UsuarioXml;
 import java.io.*;
 import java.net.*;
 import java.nio.file.Files;
@@ -20,7 +20,7 @@ import java.util.logging.*;
 
 /**
  *
- * @author alber
+ * @author JoseAngel
  */
 public class HiloC extends Thread{
     

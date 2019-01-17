@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package controlador;
+package Logica;
 
-import dominio.Archivo;
-import dominio.Usuario;
+import Entidades.Archivo;
+import Entidades.Usuario;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -24,10 +24,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
-import persistencia.ArchivoXml;
-import persistencia.ServidorXml;
-import persistencia.UsuarioXml;
-import servidor.HiloC;
+import FuenteDatos.ArchivoXml;
+import FuenteDatos.ServidorXml;
+import FuenteDatos.UsuarioXml;
+import Hilos.HiloC;
 /**
  *
  * @author alber

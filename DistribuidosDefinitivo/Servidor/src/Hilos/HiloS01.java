@@ -3,19 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package servidor;
+package Hilos;
 
-import controlador.Controladora;
+import Logica.Controladora;
 import java.io.*;
 import java.net.*;
 import java.util.logging.*;
-import persistencia.UsuarioXml;
+import FuenteDatos.UsuarioXml;
 
 /**
  *
  * @author alber
  */
-public class HiloS03 extends Thread{
+public class HiloS01 extends Thread{
     
     private Socket socket;
     private DataOutputStream dos;
@@ -23,7 +23,7 @@ public class HiloS03 extends Thread{
     Controladora control;
     UsuarioXml datos = new UsuarioXml();
     private int idSessio;
-    public HiloS03(Socket socket, int id) {
+    public HiloS01(Socket socket, int id) {
         this.socket = socket;
         this.idSessio = id;
         try {

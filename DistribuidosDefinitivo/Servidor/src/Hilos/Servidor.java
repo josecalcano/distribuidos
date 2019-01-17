@@ -3,16 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package servidor;
+package Hilos;
 
-import controlador.Controladora;
+import Logica.Controladora;
 import java.io.*;
 import java.net.*;
 import java.util.logging.*;
 
 /**
  *
- * @author alber
+ * @author JoseAngel
  */
 public class Servidor {
 
@@ -25,16 +25,12 @@ public class Servidor {
         int id = 0;
         ServerSocket socketC = null;  
         ServerSocket socketS01 = null;
-        ServerSocket socketS02 = null;
-        ServerSocket socketS03 = null;
         //##########################
         System.out.print("Inicializando servidor... ");
         try {
             //Se crean los puertos de los serversockets
             socketC = new ServerSocket(8000);
             socketS01 = new ServerSocket(10000);
-            socketS02 = new ServerSocket(10005);
-            socketS03 = new ServerSocket(10001);
             //#########################################
             System.out.println("\t[OK]");
             //Para identificar los ids de cada conexión y validaciones
@@ -45,8 +41,7 @@ public class Servidor {
                 //Se crean los sockets de conexión
                 Socket socketCC;
                 Socket socketSS01;
-                Socket socketSS02 = null;
-                Socket socketSS03 = null;
+
                 //#################################
                 //Se espera conexión de los servidores
                 //####################################
@@ -73,28 +68,7 @@ public class Servidor {
                 } catch (java.io.InterruptedIOException e) {
                     System.out.println("Tiempo de espera del servidor 1 agotado");
                 }
-                try {
-                    socketS02.setSoTimeout(2000);
-                    socketSS02 = socketS02.accept();
-                    if(socketSS02.isBound()){
-                        idSessionS = 02;
-                        System.out.println("Nueva conexión entrante del servidor: "+socketSS02);
-                        ((HiloS02) new HiloS02(socketSS02, idSessionS)).start(); 
-                    }
-                } catch (java.io.InterruptedIOException e) {
-                    System.out.println("Tiempo de espera del servidor 2 agotado");
-                }
-                try {
-                    socketS03.setSoTimeout(2000);
-                    socketSS03 = socketS03.accept();
-                    if(socketSS03.isBound()){
-                        idSessionS = 03;
-                        System.out.println("Nueva conexión entrante del servidor: "+socketSS03);
-                        ((HiloS03) new HiloS03(socketSS03, idSessionS)).start(); 
-                    }
-                } catch (java.io.InterruptedIOException e) {
-                    System.out.println("Tiempo de espera del servidor 3 agotado");
-                }
+
                 //########################################
             }
         } catch (IOException ex) {
