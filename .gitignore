@@ -104,3 +104,6 @@ venv.bak/
 .mypy_cache/
 /DistribuidosCliente/nbproject/private/
 /DistribuidosServidor/nbproject/private/
+/DistribuidosDefinitivo/Cliente/nbproject/private/
+/DistribuidosDefinitivo/Servidor/nbproject/private/
+/DistribuidosDefinitivo/ServidorReplicado/nbproject/private/
