@@ -1,0 +1,17 @@
+<UsuarioBaseDatos>
+  <Usuario>
+    <Username>ropacheco.15</Username>
+    <Password>123456</Password>
+    <Path>C:\Users\alber\Documents\NetBeansProjects\ropacheco.15\</Path>
+  </Usuario>
+  <Usuario>
+    <Username>jfdeoliveira.15</Username>
+    <Password>123456</Password>
+    <Path>C:\Users\alber\Documents\NetBeansProjects\jfoliverira.15\</Path>
+  </Usuario>
+  <Usuario>
+    <Username>agarcia.15</Username>
+    <Password>123456</Password>
+    <Path>C:\Users\alber\Documents\NetBeansProjects\agarcia.15\</Path>
+  </Usuario>
+</UsuarioBaseDatos>

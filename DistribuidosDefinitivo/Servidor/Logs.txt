@@ -1,0 +1,94 @@
+Inicializando servidor... 	[OK]
+Tiempo de espera de cliente agotado
+Tiempo de espera del servidor 1 agotado
+Tiempo de espera del servidor 2 agotado
+Tiempo de espera del servidor 3 agotado
+Tiempo de espera de cliente agotado
+Tiempo de espera del servidor 1 agotado
+Tiempo de espera del servidor 2 agotado
+Tiempo de espera del servidor 3 agotado
+Tiempo de espera de cliente agotado
+Tiempo de espera del servidor 1 agotado
+Tiempo de espera del servidor 2 agotado
+Tiempo de espera del servidor 3 agotado
+Tiempo de espera de cliente agotado
+Tiempo de espera del servidor 1 agotado
+Tiempo de espera del servidor 2 agotado
+Tiempo de espera del servidor 3 agotado
+Tiempo de espera de cliente agotado
+Tiempo de espera del servidor 1 agotado
+Tiempo de espera del servidor 2 agotado
+Tiempo de espera del servidor 3 agotado
+Tiempo de espera de cliente agotado
+Tiempo de espera del servidor 1 agotado
+Tiempo de espera del servidor 2 agotado
+Tiempo de espera del servidor 3 agotado
+Nueva conexión entrante de cliente: Socket[addr=/192.168.0.100,port=64876,localport=8000]
+001-Recibido datos de inicio de sesión al servidor.
+001-Respuesta de solicitud de inicio de sesión al cliente.
+El cliente de id= 0 se conectó
+Tiempo de espera del servidor 1 agotado
+Tiempo de espera del servidor 2 agotado
+Tiempo de espera del servidor 3 agotado
+Nueva conexión entrante de cliente: Socket[addr=/192.168.0.100,port=64883,localport=8000]
+002-Recibido archivo seleccionado del commit.
+002-Guardado archivo en el servidor.
+El cliente de id= 1 se conectó
+Tiempo de espera del servidor 1 agotado
+Tiempo de espera del servidor 2 agotado
+Tiempo de espera del servidor 3 agotado
+Nueva conexión entrante de cliente: Socket[addr=/192.168.0.100,port=64913,localport=8000]
+002-Recibido archivo seleccionado del commit.
+002-Guardado archivo en el servidor.
+El cliente de id= 2 se conectó
+Tiempo de espera del servidor 1 agotado
+Tiempo de espera del servidor 2 agotado
+Tiempo de espera del servidor 3 agotado
+Nueva conexión entrante de cliente: Socket[addr=/192.168.0.100,port=64928,localport=8000]
+002-Recibido archivo seleccionado del commit.
+002-Guardado archivo en el servidor.
+El cliente de id= 3 se conectó
+Tiempo de espera del servidor 1 agotado
+Tiempo de espera del servidor 2 agotado
+Tiempo de espera del servidor 3 agotado
+Nueva conexión entrante de cliente: Socket[addr=/192.168.0.100,port=64941,localport=8000]
+003-Recibido actualizacion de tabla de archivos del update.
+003-Enviada actualizacion de tabla de archivos del update.
+El cliente de id= 4 se conectó
+Tiempo de espera del servidor 1 agotado
+Tiempo de espera del servidor 2 agotado
+Tiempo de espera del servidor 3 agotado
+Nueva conexión entrante de cliente: Socket[addr=/192.168.0.100,port=64954,localport=8000]
+005-Recibido datos de busqueda de archivo seleccionado.
+../Servidor/almacenamiento/agarcia.15/20190110 233921_Módulo 1. Conceptos de auditoría de sistemas.pdf
+005-Encontrado el archivo seleccionado.
+005-Enviado el archivo seleccionado.
+El cliente de id= 5 se conectó
+Tiempo de espera del servidor 1 agotado
+Tiempo de espera del servidor 2 agotado
+Tiempo de espera del servidor 3 agotado
+Tiempo de espera de cliente agotado
+Tiempo de espera del servidor 1 agotado
+Tiempo de espera del servidor 2 agotado
+Tiempo de espera del servidor 3 agotado
+Tiempo de espera de cliente agotado
+Tiempo de espera del servidor 1 agotado
+Tiempo de espera del servidor 2 agotado
+Tiempo de espera del servidor 3 agotado
+Tiempo de espera de cliente agotado
+Tiempo de espera del servidor 1 agotado
+Tiempo de espera del servidor 2 agotado
+Tiempo de espera del servidor 3 agotado
+Tiempo de espera de cliente agotado
+Tiempo de espera del servidor 1 agotado
+Tiempo de espera del servidor 2 agotado
+Tiempo de espera del servidor 3 agotado
+Tiempo de espera de cliente agotado
+Tiempo de espera del servidor 1 agotado
+Tiempo de espera del servidor 2 agotado
+Tiempo de espera del servidor 3 agotado
+Tiempo de espera de cliente agotado
+Tiempo de espera del servidor 1 agotado
+Tiempo de espera del servidor 2 agotado
+Tiempo de espera del servidor 3 agotado
+Tiempo de espera de cliente agotado

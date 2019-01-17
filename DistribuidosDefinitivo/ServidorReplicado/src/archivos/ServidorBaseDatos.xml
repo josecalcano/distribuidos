@@ -1,0 +1,30 @@
+<ServidorBaseDatos>
+  <Servidor>
+    <Id>0</Id>
+    <Ip>192.168.1.0</Ip>
+    <Rol>false</Rol>
+    <Port>0</Port>
+    <State>0</State>
+  </Servidor>
+  <Servidor>
+    <Id>1</Id>
+    <Ip>192.168.1.1</Ip>
+    <Rol>false</Rol>
+    <Port>0</Port>
+    <State>0</State>
+  </Servidor>
+  <Servidor>
+    <Id>2</Id>
+    <Ip>192.168.1.2</Ip>
+    <Rol>false</Rol>
+    <Port>0</Port>
+    <State>0</State>
+  </Servidor>
+  <Servidor>
+    <Id>3</Id>
+    <Ip>192.168.1.3</Ip>
+    <Rol>false</Rol>
+    <Port>0</Port>
+    <State>0</State>
+  </Servidor>
+</ServidorBaseDatos>
